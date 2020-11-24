@@ -1,0 +1,23 @@
+section nav a {
+    padding: 2em;
+}
+
+section nav a:hover{
+    color: whitesmoke;
+}
+
+body div a:hover{
+    color: whitesmoke;
+}
+
+.text-celeste {
+    color: rgb(148, 248, 243);
+}
+
+.h-15 {
+    height: 15vh;
+}
+
+svg {
+    margin-left: 2em;
+}
