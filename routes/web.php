@@ -31,3 +31,7 @@ Route::get('/homeApp', function(){
 Route::resource('Usuarios', UsuarioController::class);
 Route::resource('Categorias', CategoriaController::class);
 Route::resource('Afiliados', AfiliadoController::class);
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('home', 'home')->name('home');
+});

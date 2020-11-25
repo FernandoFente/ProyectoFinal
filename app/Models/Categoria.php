@@ -9,7 +9,4 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    public function usuario(){
-        return $this->hasMany('app\Models\Usuario');
-    }
 }

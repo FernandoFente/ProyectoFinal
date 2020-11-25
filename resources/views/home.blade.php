@@ -2,13 +2,13 @@
 
 @section("botones")
 
-    <input type="text" name="usuario" id="nombreUsuario" placeholder="Usuario">
+    <input type="text" name="apellido" id="apellidoUsuario" placeholder="Apellido">
 
     <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
 
     <a class="btn btn-outline-light" href="homeApp" role="button">Ingresar</a>
 
-    <a class="btn btn-outline-light" href="formRegistro" role="button">Registrarse</a>
+    <a class="btn btn-outline-light" href="register" role="button">Registrarse</a>
 
 @endsection
 @section("section")

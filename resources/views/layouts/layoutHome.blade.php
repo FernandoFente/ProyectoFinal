@@ -13,15 +13,11 @@
     <header class="container">
         <div class="row bg-primary">
 
-            <div class="col-sm-3 centrado p-2">
-                <img src="./img/foto.jpg" alt="foto del sitio" class="img-fluid">
-            </div>
-
-            <div class="col-sm-4 d-flex centrado text-success">
+            <div class="col-sm-5 d-flex centrado text-success">
                 <h1>OSdelO</h1>
             </div>
 
-            <div class="col-sm-5 d-flex centrado p-2">
+            <div class="col-sm-7 d-flex centrado p-2">
                 
                 @yield("botones")
 

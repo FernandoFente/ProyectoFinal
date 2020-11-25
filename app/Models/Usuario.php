@@ -9,7 +9,4 @@ class Usuario extends Model
 {
     use HasFactory;
 
-    public function categoria(){
-        return $this->hasOne('app\Models\Categoria');
-    }
 }
