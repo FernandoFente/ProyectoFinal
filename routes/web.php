@@ -20,12 +20,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/formRegistro', function(){
-    return view('formRegistro');
-});
-
 Route::get('/homeApp', function(){
     return view('homeApp');
+});
+
+Route::get('/login', function(){
+    return view('auth.login');
 });
 
 Route::resource('Usuarios', UsuarioController::class);

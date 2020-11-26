@@ -2,9 +2,9 @@
 
 @section("botones")
 
-    <input type="text" name="apellido" id="apellidoUsuario" placeholder="Apellido">
+    <input type="text" name="mail" id="mail" placeholder="email">
 
-    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+    <input type="password" name="password" id="password" placeholder="Contraseña">
 
     <a class="btn btn-outline-light" href="homeApp" role="button">Ingresar</a>
 
