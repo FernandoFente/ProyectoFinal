@@ -2,15 +2,24 @@
 
 @section("botones")
 
-    <input type="text" name="mail" id="mail" placeholder="email">
-
-    <input type="password" name="password" id="password" placeholder="Contraseña">
-
-    <a class="btn btn-outline-light" href="homeApp" role="button">Ingresar</a>
+    <a class="btn btn-outline-light" href="login" role="button">Ingresar</a>
 
     <a class="btn btn-outline-light" href="register" role="button">Registrarse</a>
 
 @endsection
+
+@section('nav')
+    <div class="row">
+        <nav class="col-sm-12 mt-4 d-flex centrado">
+            <a href="/">Home</a>
+            <a href="#">Sedes</a>
+            <a href="#">Detalles Categorias</a>
+            <a href="#">Acerca de Nostros</a>
+            <a href="#">Contactanos</a>
+        </nav>
+    </div>
+@endsection
+
 @section("section")
     <section class="container bg-primary mt-4">
         <div class="row">

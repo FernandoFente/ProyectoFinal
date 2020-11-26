@@ -13,9 +13,9 @@
                 <p>En esat sección usted podra sacar turnos desde su casa para el departamento que quiera segun su plan de covertura.</p>
             </li>
         </ul>
-        <ul><h5>Hostoria Clinica:</h5>
+        <ul><h5>Historia Clinica:</h5>
             <li>
-                <p>En esta sección usted tendra acceso a su Historia Clinica, y podra descargarla en pdf para llevarla y compartira con quiera.</p>
+                <p>En esta sección usted tendra acceso a su Historia Clinica, y podra descargarla en pdf para llevarla y compartirla con quien quiera.</p>
             </li>
         </ul>
         <ul><h5>Resultados:</h5>

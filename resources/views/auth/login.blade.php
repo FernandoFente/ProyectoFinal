@@ -1,3 +1,9 @@
+@extends('layouts/layoutHome')
+
+@section('botones')
+    <a class="btn btn-outline-light" href="/" role="button">Volver</a>
+@endsection
+
 @section('section')
     <div class="container">
         <div class="row justify-content-center">

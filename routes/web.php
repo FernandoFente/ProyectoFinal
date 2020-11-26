@@ -24,9 +24,6 @@ Route::get('/homeApp', function(){
     return view('homeApp');
 });
 
-Route::get('/login', function(){
-    return view('auth.login');
-});
 
 Route::resource('Usuarios', UsuarioController::class);
 Route::resource('Categorias', CategoriaController::class);
