@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
-use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\AfiliadoController;
+use App\Http\Controllers\TurnosAfiliadosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +24,9 @@ Route::get('/homeApp', function(){
     return view('homeApp');
 });
 
-
-Route::resource('Usuarios', UsuarioController::class);
 Route::resource('Categorias', CategoriaController::class);
 Route::resource('Afiliados', AfiliadoController::class);
+Route::resource('TurnosAfiliados', TurnosAfiliadosController::class);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('home', 'home')->name('home');

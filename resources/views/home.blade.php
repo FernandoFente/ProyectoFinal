@@ -9,6 +9,7 @@
 @endsection
 
 @section('nav')
+
     <div class="row">
         <nav class="col-sm-12 mt-4 d-flex centrado">
             <a href="/">Home</a>
@@ -18,6 +19,7 @@
             <a href="#">Contactanos</a>
         </nav>
     </div>
+    
 @endsection
 
 @section("section")
