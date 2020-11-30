@@ -2,6 +2,17 @@ section nav a {
     padding: 2em;
 }
 
+.bg-celeste {
+    background-color: rgb(146, 236, 252);
+}
+
+table th,td{
+    padding: 1em;
+    border: 1px solid grey;
+    text-align: center;
+    color: rgb(148, 248, 243);
+}
+
 section nav a:hover{
     color: whitesmoke;
 }

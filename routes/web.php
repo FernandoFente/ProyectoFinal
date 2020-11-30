@@ -31,3 +31,7 @@ Route::resource('TurnosAfiliados', TurnosAfiliadosController::class);
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('home', 'home')->name('home');
 });
+
+Route::get('/turnosAfiliados', function(){
+    return view('turnos/turnosAfiliados');
+});
