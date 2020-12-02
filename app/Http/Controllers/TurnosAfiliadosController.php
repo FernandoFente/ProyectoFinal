@@ -14,7 +14,11 @@ class TurnosAfiliadosController extends Controller
      */
     public function index()
     {
-        return view('turnos.turnosAfiliados');
+        $turnosAfiliado = TurnosAfiliados::all();
+
+        return view('turnos.turnosAfiliados',
+            ['TurnosAfiliado'=>$turnosAfiliado]
+        );
     }
 
     /**
