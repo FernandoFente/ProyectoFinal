@@ -23,7 +23,7 @@
             <div class="col-sm-8 ">
                 <h3 class="mt-5 text-center">Solicitud de Turno</h3>
 
-            <form action="{{ route('TurnosAfiliados.store')}}" method="post" class="text-center">
+            <form action="{{ route('TurnosAfiliados.store')}}" method="post" class="text-center d-flex flex-column">
                     @csrf
                     <label for="departamento">Seleccione Area:</label>
                     <select name="departamento" id="departamento">
@@ -38,10 +38,30 @@
                                 
                     <label for="turno">Seleccione fecha:</label>
                     <input type="date" name="turno" id="turno">
-                                
-                    <button type="submit" class="btn btn-success mb-3 mt-3">Reservar Turno</button>
 
-                    <a href={{ route('TurnosAfiliados.index')}} class="btn btn-danger mb-3 mt-3">Cancelar</a>
+                    <label for="horario">Horario:</label>
+                    <select name="horario" id="horario">
+                        <option value="">--Seleccione horario--</option>
+                        <option value="8:00">8:00</option>
+                        <option value="8:30">8:30</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:30">9:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="10:30">13:00</option>
+                        <option value="10:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                    </select>
+                    
+                    <div>
+                        <button type="submit" class="btn btn-success mb-3 mt-3">Reservar Turno</button>
+
+                        <a href={{ route('TurnosAfiliados.index')}} class="btn btn-danger mb-3 mt-3">Cancelar</a>
+                    </div>
                 </form>
             </div>
 

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\Usuario;
+use App\Models\Doctor;
 use Illuminate\Http\Request;
 
-class UsuarioController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +41,10 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuarios $usuarios)
+    public function show(Doctor $doctor)
     {
         //
     }
@@ -53,10 +52,10 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuarios $usuarios)
+    public function edit(Doctor $doctor)
     {
         //
     }
@@ -65,10 +64,10 @@ class UsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuarios $usuarios)
+    public function update(Request $request, Doctor $doctor)
     {
         //
     }
@@ -76,10 +75,10 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuarios $usuarios)
+    public function destroy(Doctor $doctor)
     {
         //
     }

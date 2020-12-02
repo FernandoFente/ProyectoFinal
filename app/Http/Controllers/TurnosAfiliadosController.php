@@ -38,6 +38,7 @@ class TurnosAfiliadosController extends Controller
         $turno = new TurnosAfiliados();
         $turno->departamento = $request->departamento;
         $turno->turno = $request->turno;
+        $turno->horario = $request->horario;
 
         $turno->save();
 
