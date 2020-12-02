@@ -14,7 +14,7 @@ class TurnosAfiliadosController extends Controller
      */
     public function index()
     {
-        //
+        return view('turnos.turnosAfiliados');
     }
 
     /**
@@ -24,7 +24,7 @@ class TurnosAfiliadosController extends Controller
      */
     public function create()
     {
-        //
+        return view('turnos.createTurno');
     }
 
     /**
@@ -35,7 +35,13 @@ class TurnosAfiliadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $turno = new TurnosAfiliados();
+        $turno->departamento = $request->departamento;
+        $turno->turno = $request->turno;
+
+        $turno->save();
+
+        return redirect()->route('TurnosAfiliados.index');
     }
 
     /**

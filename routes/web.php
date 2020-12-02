@@ -22,10 +22,8 @@ Route::get('/', function () {
 
 Route::get('/homeApp', function(){
     return view('homeApp');
-});
+})->middleware(['visitante']);
 
-Route::resource('Categorias', CategoriaController::class);
-Route::resource('Afiliados', AfiliadoController::class);
 Route::resource('TurnosAfiliados', TurnosAfiliadosController::class);
 
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -5,7 +5,11 @@
 @endsection
 
 @section('contenido')
-        <h3 class="text-center">Sus turnos reservados</h3>
+        
+<h3 class="text-center mt-5">Solicitud de Turno<a href="{{route('TurnosAfiliados.create')}}" class="btn btn-success ml-md-5">Sacar un turno</a></h3>
+            
+
+        <h3 class="text-center mt-5">Sus turnos reservados</h3>
         <div class="d-flex justify-content-center">
             <table class="text-center border border-dark bg-primary">
                 <tr class="border border-dark">
@@ -27,23 +31,5 @@
                 </tr>
             </table>
         </div>
-
-        <h3 class="text-center mt-5">Solicitud de Turno</h3>
-        <form action="#" method="post" class="text-center">
-                @csrf
-                <label for="departamento">Seleccione Area:</label>
-                <select name="departamento" id="departamento">
-                        <option value="">--Seleccione departamento--</option>
-                        <option value="clinico">Clinico</option>
-                        <option value="pediatra">Pediatra</option>
-                        <option value="traumatologo">Traumatologo</option>
-                        <option value="dermatologo">Dermatologo</option>
-                        <option value="radiologo">Radiologia</option>
-                </select>
-
-                <label for="fecha">Seleccione fecha:</label>
-                <input type="date" name="fecha" id="fecha">
-
-                <button type="submit" class="btn btn-success">Reservar Turno</button>
-        </form>    
+   
 @endsection
