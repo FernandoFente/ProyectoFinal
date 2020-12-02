@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ModificarTablaAfiliados extends Migration
+class CreacionTablaDoctores extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class ModificarTablaAfiliados extends Migration
      */
     public function up()
     {
-        Schema::table('afiliados', function (Blueprint $table) {
+        Schema::create('doctores', function (Blueprint $table) {
+            $table->id();
+            $table->string('departamento');
+            $table->string('matricula');
             $table->string('apellido', 15);
-
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ class ModificarTablaAfiliados extends Migration
      */
     public function down()
     {
-        Schema::table('afiliados', function (Blueprint $table) {
-            
-        });
+        Schema::dropIfExists('doctores');
     }
 }

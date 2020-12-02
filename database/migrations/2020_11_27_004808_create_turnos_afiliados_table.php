@@ -17,6 +17,7 @@ class CreateTurnosAfiliadosTable extends Migration
             $table->id();            
             $table->date('turno');
             $table->string('departamento');
+            $table->time('horario', 0);
             $table->timestamps();
         });
     }

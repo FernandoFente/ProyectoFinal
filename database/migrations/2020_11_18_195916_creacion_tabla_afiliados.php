@@ -15,9 +15,10 @@ class CreacionTablaAfiliados extends Migration
     {
         Schema::create('Afiliados', function (Blueprint $table) {
             $table->id();
-            $table->string('plan', 10)->notnull();
+            $table->string('apellido', 15);
             $table->integer('cuil')->notnull();
-            $table->string('email', 40);
+            $table->integer('edad');
+            $table->string('plan', 10)->notnull();
             $table->timestamps();
         });
     }
