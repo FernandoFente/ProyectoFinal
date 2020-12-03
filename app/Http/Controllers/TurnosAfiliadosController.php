@@ -57,7 +57,7 @@ class TurnosAfiliadosController extends Controller
      */
     public function show(TurnosAfiliados $turnosAfiliados)
     {
-        //
+        return view('turnos.showTurno', ['TurnosAfiliado'=>$turnosAfiliados]);
     }
 
     /**
