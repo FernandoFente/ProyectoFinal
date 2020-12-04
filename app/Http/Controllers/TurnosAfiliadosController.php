@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TurnosAfiliado;
+use App\Models\TurnoAfiliado;
 use Illuminate\Http\Request;
 
 class TurnosAfiliadosController extends Controller
@@ -14,10 +14,10 @@ class TurnosAfiliadosController extends Controller
      */
     public function index()
     {
-        $turnosAfiliado = TurnosAfiliado::all();
+        $TurnoAfiliado = TurnoAfiliado::all();
 
         return view('turnos.turnosAfiliados',
-            ['turnosafiliado'=>$turnosAfiliado]
+            ['turnosafiliado'=>$TurnoAfiliado]
         );
     }
 
@@ -39,7 +39,7 @@ class TurnosAfiliadosController extends Controller
      */
     public function store(Request $request)
     {
-        $turno = new TurnosAfiliado();
+        $turno = new TurnoAfiliado();
         $turno->departamento = $request->departamento;
         $turno->turno = $request->turno;
         $turno->horario = $request->horario;
@@ -52,33 +52,33 @@ class TurnosAfiliadosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
+     * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, TurnosAfiliado $turnosAfiliados)
+    public function show(TurnosAfiliado $TurnoAfiliado)
     {
-        return view('turnos.showTurno', ['turnosafiliado'=>$turnosAfiliados]);
+        return view('turnos.showTurno', ['turnosafiliado'=>$TurnoAfiliado]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
+     * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function edit(TurnosAfiliado $turnosAfiliados)
+    public function edit(TurnosAfiliado $TurnoAfiliado)
     {
-        dd($turnosAfiliados);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
+     * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TurnosAfiliado $turnosAfiliados)
+    public function update(Request $request, TurnosAfiliado $TurnoAfiliado)
     {
         //
     }
@@ -86,10 +86,10 @@ class TurnosAfiliadosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
+     * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TurnosAfiliado $turnosAfiliados)
+    public function destroy(TurnosAfiliado $TurnoAfiliado)
     {
         //
     }

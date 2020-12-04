@@ -23,7 +23,7 @@
                     <div class="col-sm-8 ">
                         <h3 class="mt-5 text-center">Cancelar turno</h3>
         
-                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliados'=>$turnosafiliado->id])}}" method="post">
+                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliado'=>$turnosafiliado->id])}}" method="POST">
                             @csrf
                             @method("DELETE")
                             <fieldset disabled="disabled">

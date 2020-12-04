@@ -13,12 +13,17 @@ class CreateTurnosAfiliadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('turnos_afiliados', function (Blueprint $table) {
+        Schema::create('turno_afiliados', function (Blueprint $table) {
             $table->id();            
             $table->date('turno');
             $table->string('departamento');
             $table->time('horario', 0);
+            $table->unsignedBigInteger('doctor_id')->nullable();
+            $table->unsignedBigInteger('afiliado_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('doctor_id')->references('id')->on('doctores');
+            $table->foreign('afiliado_id')->references('id')->on('afiliados');
         });
     }
 

@@ -16,8 +16,10 @@ class CreacionTablaCategorias extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
             $table->string('categoria', 20);
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

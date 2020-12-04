@@ -18,7 +18,10 @@ class CreacionTablaDoctores extends Migration
             $table->string('departamento');
             $table->string('matricula');
             $table->string('apellido', 15);
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

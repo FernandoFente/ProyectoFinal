@@ -30,7 +30,7 @@
                         <td>{{$turnoAfiliado->turno}}</td>
                         <td>{{$turnoAfiliado->horario}}</td>
                         <td>
-                            <a href="{{route('turnosafiliados.show',['turnosafiliado'=>$turnoAfiliado->id])}}" class="text-celeste">
+                        <a href="{{--{{route('turnosafiliados.show',['turnosafiliado'=>$turnosafiliado->id])}}--}}" class="text-celeste">
                                 Cancelar Turno
                             </a>
                         </td>
