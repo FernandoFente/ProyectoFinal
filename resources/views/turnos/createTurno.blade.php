@@ -23,7 +23,7 @@
             <div class="col-sm-8 ">
                 <h3 class="mt-5 text-center">Solicitud de Turno</h3>
 
-            <form action="{{ route('TurnosAfiliados.store')}}" method="post" class="text-center d-flex flex-column">
+            <form action="{{ route('turnosafiliados.store')}}" method="post" class="text-center d-flex flex-column">
                     @csrf
                     <label for="departamento">Seleccione Area:</label>
                     <select name="departamento" id="departamento">
@@ -60,7 +60,7 @@
                     <div>
                         <button type="submit" class="btn btn-success mb-3 mt-3">Reservar Turno</button>
 
-                        <a href={{ route('TurnosAfiliados.index')}} class="btn btn-danger mb-3 mt-3">Cancelar</a>
+                        <a href={{ route('turnosafiliados.index')}} class="btn btn-danger mb-3 mt-3">Cancelar</a>
                     </div>
                 </form>
             </div>

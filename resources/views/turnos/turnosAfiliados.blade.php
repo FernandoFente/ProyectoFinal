@@ -6,7 +6,7 @@
 
 @section('contenido')
         
-<h3 class="text-center mt-5">Solicitud de Turno<a href="{{route('TurnosAfiliados.create')}}" class="btn btn-success ml-md-5">Sacar un turno</a></h3>
+<h3 class="text-center mt-5">Solicitud de Turno<a href="{{route('turnosafiliados.create')}}" class="btn btn-success ml-md-5">Sacar un turno</a></h3>
             
 
         <h3 class="text-center mt-5">Sus turnos reservados</h3>
@@ -23,14 +23,14 @@
                 </thead>
 
                 <tbody>
-                    @forelse ($TurnosAfiliado as $turnoAfiliado)
+                    @forelse ($turnosafiliado as $turnoAfiliado)
                         
                     <tr>
                         <td>{{$turnoAfiliado->departamento}}</td>
                         <td>{{$turnoAfiliado->turno}}</td>
                         <td>{{$turnoAfiliado->horario}}</td>
                         <td>
-                            <a href="{{route('TurnosAfiliados.show',['TurnosAfiliado'=>$turnoAfiliado->id])}}" class="text-celeste">
+                            <a href="{{route('turnosafiliados.show',['turnosafiliado'=>$turnoAfiliado->id])}}" class="text-celeste">
                                 Cancelar Turno
                             </a>
                         </td>

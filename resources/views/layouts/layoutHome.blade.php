@@ -11,7 +11,7 @@
 <body>
     
     <header class="container">
-        <div class="row bg-primary">
+        <div class="row">
 
             <div class="col-sm-8 d-flex centrado text-success">
                 <h1>OSdelO</h1>
@@ -33,7 +33,7 @@
 
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                        {{ Auth::user()->email }}
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -46,6 +46,7 @@
                         </form>
                     </div>
                 </li>
+
                 @endguest
 
             </div>

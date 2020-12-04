@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TurnosAfiliados;
+use App\Models\TurnosAfiliado;
 use Illuminate\Http\Request;
 
 class TurnosAfiliadosController extends Controller
@@ -14,10 +14,10 @@ class TurnosAfiliadosController extends Controller
      */
     public function index()
     {
-        $turnosAfiliado = TurnosAfiliados::all();
+        $turnosAfiliado = TurnosAfiliado::all();
 
         return view('turnos.turnosAfiliados',
-            ['TurnosAfiliado'=>$turnosAfiliado]
+            ['turnosafiliado'=>$turnosAfiliado]
         );
     }
 
@@ -39,46 +39,46 @@ class TurnosAfiliadosController extends Controller
      */
     public function store(Request $request)
     {
-        $turno = new TurnosAfiliados();
+        $turno = new TurnosAfiliado();
         $turno->departamento = $request->departamento;
         $turno->turno = $request->turno;
         $turno->horario = $request->horario;
 
         $turno->save();
 
-        return redirect()->route('TurnosAfiliados.index');
+        return redirect()->route('turnosafiliados.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TurnosAfiliados  $turnosAfiliados
+     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function show(TurnosAfiliados $turnosAfiliados)
+    public function show(Request $request, TurnosAfiliado $turnosAfiliados)
     {
-        return view('turnos.showTurno', ['TurnosAfiliado'=>$turnosAfiliados]);
+        return view('turnos.showTurno', ['turnosafiliado'=>$turnosAfiliados]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TurnosAfiliados  $turnosAfiliados
+     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function edit(TurnosAfiliados $turnosAfiliados)
+    public function edit(TurnosAfiliado $turnosAfiliados)
     {
-        //
+        dd($turnosAfiliados);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TurnosAfiliados  $turnosAfiliados
+     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TurnosAfiliados $turnosAfiliados)
+    public function update(Request $request, TurnosAfiliado $turnosAfiliados)
     {
         //
     }
@@ -86,10 +86,10 @@ class TurnosAfiliadosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TurnosAfiliados  $turnosAfiliados
+     * @param  \App\Models\TurnosAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TurnosAfiliados $turnosAfiliados)
+    public function destroy(TurnosAfiliado $turnosAfiliados)
     {
         //
     }
