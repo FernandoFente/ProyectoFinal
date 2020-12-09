@@ -23,14 +23,14 @@
                 </thead>
 
                 <tbody>
-                    @forelse ($turnosafiliado as $turnoAfiliado)
+                    @forelse ($turnosafiliado as $TurnoAfiliado)
                         
                     <tr>
-                        <td>{{$turnoAfiliado->departamento}}</td>
-                        <td>{{$turnoAfiliado->turno}}</td>
-                        <td>{{$turnoAfiliado->horario}}</td>
+                        <td>{{$TurnoAfiliado->departamento}}</td>
+                        <td>{{$TurnoAfiliado->turno}}</td>
+                        <td>{{$TurnoAfiliado->horario}}</td>
                         <td>
-                        <a href="{{--{{route('turnosafiliados.show',['turnosafiliado'=>$turnosafiliado->id])}}--}}" class="text-celeste">
+                            <a href="{{route('turnosafiliados.show',['turnosafiliado'=>$TurnoAfiliado->id])}}" class="text-celeste">
                                 Cancelar Turno
                             </a>
                         </td>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TurnoAfiliado;
 use Illuminate\Http\Request;
 
-class TurnosAfiliadosController extends Controller
+class TurnoAfiliadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -55,7 +55,7 @@ class TurnosAfiliadosController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function show(TurnosAfiliado $TurnoAfiliado)
+    public function show(TurnoAfiliado $TurnoAfiliado)
     {
         return view('turnos.showTurno', ['turnosafiliado'=>$TurnoAfiliado]);
     }
@@ -66,7 +66,7 @@ class TurnosAfiliadosController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function edit(TurnosAfiliado $TurnoAfiliado)
+    public function edit(TurnoAfiliado $TurnoAfiliado)
     {
         //
     }
@@ -78,7 +78,7 @@ class TurnosAfiliadosController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TurnosAfiliado $TurnoAfiliado)
+    public function update(Request $request, TurnoAfiliado $TurnoAfiliado)
     {
         //
     }
@@ -89,7 +89,7 @@ class TurnosAfiliadosController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TurnosAfiliado $TurnoAfiliado)
+    public function destroy(TurnoAfiliado $TurnoAfiliado)
     {
         //
     }

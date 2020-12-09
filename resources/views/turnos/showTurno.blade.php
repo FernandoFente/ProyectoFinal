@@ -23,7 +23,7 @@
                     <div class="col-sm-8 ">
                         <h3 class="mt-5 text-center">Cancelar turno</h3>
         
-                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliado'=>$turnosafiliado->id])}}" method="POST">
+                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliado'=>$TurnoAfiliado->id])}}" method="POST">
                             @csrf
                             @method("DELETE")
                             <fieldset disabled="disabled">
@@ -32,21 +32,21 @@
                                 <label for="departamento">Departamento:</label>
                                 <input type="text" name="departamento" id="departamento" class="form-control @error('departamento') is-invalid @enderror"
                                 placeholder="departamento" required="required" maxlength="100" 
-                                value="{{ $turnosafiliado->departamento }}">
+                                value="{{ $TurnoAfiliado->departamento }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="turno">Fecha:</label>
                                 <input type="date" name="turno" class="form-control" id="turno"
                                 placeholder="Fecha del turno" required="required" 
-                                value="{{ $turnosafiliado->turno }}">
+                                value="{{ $TurnoAfiliado->turno }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="horario">Horario:</label>
                                 <input type="time" name="horario" class="form-control" id="horario"
                                 placeholder="Horario del turno" required="required" 
-                                value="{{ $turnosafiliado->horario }}">
+                                value="{{ $TurnoAfiliado->horario }}">
                             </div>
 
                             </fieldset>

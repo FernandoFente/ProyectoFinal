@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\AfiliadoController;
-use App\Http\Controllers\TurnosAfiliadosController;
+use App\Http\Controllers\TurnoAfiliadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Route::get('/homeApp', function(){
     return view('homeApp');
 })->middleware(['visitante']);
 
-Route::resource('turnosafiliados', TurnosAfiliadosController::class);
+Route::resource('turnosafiliados', TurnoAfiliadoController::class);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('home', 'home')->name('home');

@@ -23,9 +23,9 @@
 @endsection
 
 @section("section")
-    <section class="container bg-primary mt-4">
+    <section class="container bg-celeste mt-4">
         <div class="row">
-            <div class="col-sm-12 mt-3 mb-3 text-success">
+            <div class="col-sm-12 mt-3 mb-3 text-primary">
                 <h3 class="text-center">Categorias de Planes</h3>
             </div>
         </div>
@@ -37,29 +37,29 @@
             <div class="col-sm-8 d-flex centrado mb-5">
                 <table>
                     <tr>
-                        <th>Plan de salud</th>
-                        <th>Alcance</th>
-                        <th>Cuota por mes</th>
+                        <th class="border border-primary text-primary">Plan de salud</th>
+                        <th class="border border-primary text-primary">Alcance</th>
+                        <th class="border border-primary text-primary">Cuota por mes</th>
                     </tr>
                     <tr>
-                        <td>Bronce</td>
-                        <td>Atención medica</td>
-                        <td>$3.500-</td>
+                        <td class="border border-primary text-primary">Bronce</td>
+                        <td class="border border-primary text-primary">Atención medica</td>
+                        <td class="border border-primary text-primary">$3.500-</td>
                     </tr>
                     <tr>
-                        <td>Plata</td>
-                        <td>+ Odontologia</td>
-                        <td>$4.250-</td>
+                        <td class="border border-primary text-primary">Plata</td>
+                        <td class="border border-primary text-primary">+ Odontologia</td>
+                        <td class="border border-primary text-primary">$4.250-</td>
                     </tr>
                     <tr>
-                        <td>Oro</td>
-                        <td>+ cirujias, internaciones y operaciones</td>
-                        <td>$5.000-</td>
+                        <td class="border border-primary text-primary">Oro</td>
+                        <td class="border border-primary text-primary">+ cirujias, internaciones y operaciones</td>
+                        <td class="border border-primary text-primary">$5.000-</td>
                     </tr>
                     <tr>
-                        <td>Platino</td>
-                        <td>Todos los servicios</td>
-                        <td>$6.000-</td>
+                        <td class="border border-primary text-primary">Platino</td>
+                        <td class="border border-primary text-primary">Todos los servicios</td>
+                        <td class="border border-primary text-primary">$6.000-</td>
                     </tr>
                 </table>
             </div>
