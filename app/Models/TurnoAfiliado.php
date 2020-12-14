@@ -9,4 +9,7 @@ class TurnoAfiliado extends Model
 {
     use HasFactory;
 
+    public function afiliado(){
+        return $this->belongsTo('App\Models\Afiliado');
+    }
 }

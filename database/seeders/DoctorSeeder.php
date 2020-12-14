@@ -5,10 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class DoctorSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'matricula' => '524324385',
             'apellido' => 'Sancho',
         ]);
-        
+
         DB::table('doctores')->insert([
             'departamento' => 'Pediatra',
             'matricula' => '845743241',

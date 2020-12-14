@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\TurnoAfiliado;
+use App\Models\Afiliado;
+use App\Models\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class TurnoAfiliadoController extends Controller
@@ -28,7 +31,12 @@ class TurnoAfiliadoController extends Controller
      */
     public function create()
     {
-        return view('turnos.createTurno');
+        $user = Auth::user();
+        $afiliado = Afiliado::where('user_id', $user->id)->first();
+
+        return view('turnos.createTurno', 
+        ['afiliado_id'=>$afiliado->id]
+        );
     }
 
     /**
@@ -44,6 +52,9 @@ class TurnoAfiliadoController extends Controller
         $turno->turno = $request->turno;
         $turno->horario = $request->horario;
 
+        $afiliado = Afiliado::find($request->afiliado_id);
+        $turno->afiliado()->associate($afiliado);
+
         $turno->save();
 
         return redirect()->route('turnosafiliados.index');
@@ -55,8 +66,9 @@ class TurnoAfiliadoController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function show(TurnoAfiliado $TurnoAfiliado)
+    public function show($id)
     {
+        $TurnoAfiliado = TurnoAfiliado::find($id);
         return view('turnos.showTurno', ['turnosafiliado'=>$TurnoAfiliado]);
     }
 
@@ -89,8 +101,11 @@ class TurnoAfiliadoController extends Controller
      * @param  \App\Models\TurnoAfiliado  $turnosAfiliados
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TurnoAfiliado $TurnoAfiliado)
+    public function destroy($id)
     {
-        //
+        $TurnoAfiliado = TurnoAfiliado::find($id);
+        $TurnoAfiliado->delete();
+
+        return redirect()->route('turnosafiliados.index');
     }
 }

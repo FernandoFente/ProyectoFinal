@@ -25,7 +25,9 @@
         
 
         <div class="text-center d-flex align-items-center text-celeste">
-            <a href="#" class="d-flex align-items-center text-celeste text-decoration-none">Nombre del Usuario</a>
+            <a href="{{route('afiliado.index')}}" class="d-flex align-items-center text-celeste text-decoration-none">
+                <b>Perfil</b>
+            </a>
             <div class="text-center d-flex align-items-center text-celeste">
                 <a href="/" class="d-flex align-items-center text-celeste text-decoration-none ml-2">
                     <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

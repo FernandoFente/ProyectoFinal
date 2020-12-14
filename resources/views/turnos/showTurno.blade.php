@@ -18,12 +18,14 @@
                         Cancelar Turno
                     </h2>
                 </div>
-                <div class="row border border-dark">
-        
-                    <div class="col-sm-8 ">
+                <div class="row">
+                    
+                    <div class="col-sm-3"></div>
+
+                    <div class="col-sm-6 border">
                         <h3 class="mt-5 text-center">Cancelar turno</h3>
         
-                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliado'=>$TurnoAfiliado->id])}}" method="POST">
+                    <form action="{{route('turnosafiliados.destroy', ['turnosafiliado'=>$turnosafiliado->id])}}" method="POST">
                             @csrf
                             @method("DELETE")
                             <fieldset disabled="disabled">
@@ -32,32 +34,34 @@
                                 <label for="departamento">Departamento:</label>
                                 <input type="text" name="departamento" id="departamento" class="form-control @error('departamento') is-invalid @enderror"
                                 placeholder="departamento" required="required" maxlength="100" 
-                                value="{{ $TurnoAfiliado->departamento }}">
+                                value="{{ $turnosafiliado->departamento }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="turno">Fecha:</label>
                                 <input type="date" name="turno" class="form-control" id="turno"
                                 placeholder="Fecha del turno" required="required" 
-                                value="{{ $TurnoAfiliado->turno }}">
+                                value="{{ $turnosafiliado->turno }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="horario">Horario:</label>
                                 <input type="time" name="horario" class="form-control" id="horario"
                                 placeholder="Horario del turno" required="required" 
-                                value="{{ $TurnoAfiliado->horario }}">
+                                value="{{ $turnosafiliado->horario }}">
                             </div>
 
                             </fieldset>
                             
-                            <div>
-                                <button type="submit" class="btn btn-warning">Eliminar</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-warning">Cancelar Turno</button>
         
-                                <a href={{ route('turnosafiliados.index')}} class="btn btn-danger">Cancelar</a>
+                                <a href={{ route('turnosafiliados.index')}} class="btn btn-danger">Volver</a>
                             </div>
                         </form>
                     </div>
+
+                    <div class="col-sm-3"></div>
         
                 </div>
         

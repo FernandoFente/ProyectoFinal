@@ -17,14 +17,16 @@
                 Solicite su turno
             </h2>
         </div>
-        <div class="row border border-dark">
+        <div class="row">
             <div class="col-sm-2"></div>
 
-            <div class="col-sm-8 ">
+            <div class="col-sm-8 border">
                 <h3 class="mt-5 text-center">Solicitud de Turno</h3>
 
             <form action="{{ route('turnosafiliados.store')}}" method="post" class="text-center d-flex flex-column">
                     @csrf
+                    <input type="hidden" name="afiliado_id" value="{{$afiliado_id}}">
+                    
                     <label for="departamento">Seleccione Area:</label>
                     <select name="departamento" id="departamento">
                         <option value="">--Seleccione departamento--</option>

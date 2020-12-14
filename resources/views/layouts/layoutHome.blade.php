@@ -49,7 +49,6 @@
                                 </form>
                             </li>
                         <li><a class="dropdown-item" href="/homeApp">Tu App de turnos Online</a></li>
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
                         </ul>
                     </div>
 

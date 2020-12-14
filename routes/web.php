@@ -25,6 +25,7 @@ Route::get('/homeApp', function(){
 })->middleware(['visitante']);
 
 Route::resource('turnosafiliados', TurnoAfiliadoController::class);
+Route::resource('afiliado', AfiliadoController::class);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('home', 'home')->name('home');

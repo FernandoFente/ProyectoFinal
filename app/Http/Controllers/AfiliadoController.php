@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Afiliado;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Auth;
 
 class AfiliadoController extends Controller
 {
@@ -14,7 +17,12 @@ class AfiliadoController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $afiliado = Afiliado::where('user_id',$user->id)->get();
+
+        return view('afiliados.perfil',
+            ['afiliado'=>$afiliado, 'user'=>$user]
+        );
     }
 
     /**
@@ -24,7 +32,11 @@ class AfiliadoController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user();
+        $afiliado = Afiliado::where('user_id', $user->id)->get();
+
+        return view('afiliados.create', ['user'=>$user, 'afiliado'=>$afiliado ]
+        );
     }
 
     /**
@@ -35,7 +47,19 @@ class AfiliadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $afiliado = new Afiliado();
+        $afiliado->apellido = $request->apellido;
+        $afiliado->cuil = $request->cuil;
+        $afiliado->edad = $request->edad;
+        $afiliado->plan = $request->plan;
+
+        $user = Auth::user();
+        $afiliado->user()->associate($user);
+
+        $afiliado->save();
+
+        return redirect()->route('afiliado.index');
+
     }
 
     /**
