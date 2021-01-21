@@ -28,14 +28,14 @@
                     <div class="card-header">Completar perfil</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('afiliado.store') }}">
+                        <form method="POST" action=" {{ route ('afiliado.update', ['afiliado'=>$afiliado->id]) }}">
                             @csrf
-                            
+                            @method('PUT')
                             <div class="form-group row">
                             <label for="apellido" class="col-md-4 col-form-label text-md-right">Apellido</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" name="apellido" id="apellido" class="form-control">
+                                    <input type="text" value="@isset($afiliado){{$afiliado->apellido}}@else{{''}}@endisset" name="apellido" id="apellido" class="form-control">
                                 </div>
                             </div>
 
@@ -43,7 +43,7 @@
                                 <label for="cuil" class="col-md-4 col-form-label text-md-right">Cuil</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" name="cuil" id="cuil" class="form-control">
+                                    <input type="number" value="@isset($afiliado){{$afiliado->cuil}}@else{{''}}@endisset" name="cuil" id="cuil" class="form-control">
                                 </div>
                             </div>
 
@@ -51,7 +51,7 @@
                                 <label for="edad" class="col-md-4 col-form-label text-md-right">Edad</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" name="edad" id="edad" class="form-control">
+                                    <input type="number" value="@isset($afiliado){{$afiliado->edad}}@else{{''}}@endisset" name="edad" id="edad" class="form-control">
                                 </div>
                             </div>
 
@@ -59,13 +59,14 @@
                                 <label for="plan" class="col-md-4 col-form-label text-md-right">Plan</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" name="plan" id="plan" class="form-control">
+                                    <input type="text" value="@isset($afiliado){{$afiliado->plan}}@else{{''}}@endisset" name="plan" id="plan" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-success">Completar Perfil</button>
+                                    <button type="submit" class="btn btn-success">Editar Perfil</button>
+                                    <a href="{{ route('afiliado.index') }}" class="btn btn-danger">Cancelar</a>
                                 </div>
                             </div>
                         </form>

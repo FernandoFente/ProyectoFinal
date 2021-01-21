@@ -17,7 +17,9 @@ class TurnoAfiliadoController extends Controller
      */
     public function index()
     {
-        $TurnoAfiliado = TurnoAfiliado::all();
+        $user = Auth::user();
+        $afiliado = Afiliado::where('user_id', $user->id)->first();
+        $TurnoAfiliado = TurnoAfiliado::where('afiliado_id', $afiliado->id)->get();
 
         return view('turnos.turnosAfiliados',
             ['turnosafiliado'=>$TurnoAfiliado]

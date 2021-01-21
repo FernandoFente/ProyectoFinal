@@ -55,7 +55,7 @@
                             <label for="apellido" class="col-md-4 col-form-label text-md-right">Apellido</label>
 
                                 <div class="col-md-6">
-                                    <input type="text" value="" name="apellido" id="apellido" class="form-control">
+                                    <input type="text" value="@isset($afiliado){{$afiliado->apellido}}@else{{''}}@endisset" name="apellido" id="apellido" class="form-control">
                                 </div>
                             </div>
 
@@ -63,7 +63,7 @@
                                 <label for="cuil" class="col-md-4 col-form-label text-md-right">Cuil</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" name="cuil" id="cuil" class="form-control">
+                                    <input type="number" value="@isset($afiliado){{$afiliado->cuil}}@else{{''}}@endisset" name="cuil" id="cuil" class="form-control">
                                 </div>
                             </div>
 
@@ -71,7 +71,7 @@
                                 <label for="edad" class="col-md-4 col-form-label text-md-right">Edad</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" name="edad" id="edad" class="form-control">
+                                    <input type="number" value="@isset($afiliado){{$afiliado->edad}}@else{{''}}@endisset" name="edad" id="edad" class="form-control">
                                 </div>
                             </div>
 
@@ -79,7 +79,7 @@
                                 <label for="plan" class="col-md-4 col-form-label text-md-right">Plan</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" name="plan" id="plan" class="form-control">
+                                    <input type="text" value="@isset($afiliado){{$afiliado->plan}}@else{{''}}@endisset" name="plan" id="plan" class="form-control">
                                 </div>
                             </div>
 
@@ -87,8 +87,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-12 text-center">
-                                    <a href="{{route('afiliado.create')}}" class="btn btn-success ml-md-5">Completar Perfil</a>
-                                    <a href="" class="btn btn-warning ml-md-5">Modificar Perfil</a>
+                                    <a href="{{ route('afiliado.edit',['afiliado'=>$afiliado->id]) }}" class="btn btn-success ml-md-5">Editar Perfil</a>
                                 </div>
                             </div>
                         </form>

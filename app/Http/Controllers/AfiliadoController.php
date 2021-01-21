@@ -18,7 +18,7 @@ class AfiliadoController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $afiliado = Afiliado::where('user_id',$user->id)->get();
+        $afiliado = Afiliado::where('user_id',$user->id)->first();
 
         return view('afiliados.perfil',
             ['afiliado'=>$afiliado, 'user'=>$user]
@@ -81,7 +81,7 @@ class AfiliadoController extends Controller
      */
     public function edit(Afiliado $afiliado)
     {
-        //
+        return view('afiliados.editPerfil', ['afiliado'=>$afiliado]);
     }
 
     /**
@@ -93,7 +93,14 @@ class AfiliadoController extends Controller
      */
     public function update(Request $request, Afiliado $afiliado)
     {
-        //
+        $afiliado->apellido = $request->apellido;
+        $afiliado->cuil = $request->cuil;
+        $afiliado->edad = $request->edad;
+        $afiliado->plan = $request->plan;
+
+        $afiliado->save();
+
+        return redirect()->route('afiliado.index');
     }
 
     /**
